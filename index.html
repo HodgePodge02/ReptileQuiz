@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/Main.css">
+    <title>What kind of reptile are you?!</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Reptile Quiz</h1>
+    </nav>
+    <!-- Main Landing Page -->
+    <div id="MainPage">
+        <div id="MainContent">
+            <h1>Take a quiz to find out what reptile you are!</h1>
+            <img src="img/reptile_HP.png" alt="">
+            <button id="GetStarted">Get Started!</button>
+        </div>
+    </div>
+
+    <!-- Multiple Choice Questions -->
+    <div id="QuestionsPage">
+        <div id="QuestionsContent">
+            <div class="flex-end">
+                <span id="Counter"></span>
+            </div>
+            <div id="Questions">
+                <h1 id="QuestionsText"></h1>
+                <button class="answer-btn 0"></button>
+                <button class="answer-btn 1"></button>
+                <button class="answer-btn 2"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result! -->
+    <div id="ResultPage">
+
+    </div>
+</body>
+<script type="module" src="app.js"></script>
+<script type="module" src="data.js"></script>
+
+</html>
