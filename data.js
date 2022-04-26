@@ -8,7 +8,7 @@ export default [
         weights: {
           lizard: 3,
           turtle: 5,
-          alligator: 1,
+          alligator: 2,
         },
       },
       {
@@ -35,22 +35,22 @@ export default [
       {
         text: "Look for a large animal and stalk it until it enters my territory.",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
 
         text: "Whatever comes along, dead, alive, vegetation, whatever dude, food is food!",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
 
         text: "Catching my prey in mid-air!",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
       },
@@ -62,22 +62,22 @@ export default [
       {
         text: "RUN and don't stop until you're completely hidden.",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
 
         text: "Who has the audacity to attack me?! I am the Apex predator, I am the one who attacks...",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
 
         text: "Try and escape but if your attacker is relentless then chomp at em!",
         weights: {
-          Alligator: 5,
-          Lizard: 2,
+          alligator: 5,
+          lizard: 2,
           turtle: 3,
         },
       },

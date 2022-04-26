@@ -14,6 +14,12 @@ const counter = document.getElementById("Counter");
 const questionsText = document.getElementById("QuestionsText");
 const answerButtons = document.querySelectorAll(".answer-btn");
 
+// REPTILE VAR
+let alligator = 0;
+let lizard = 0;
+let turtle = 0;
+// let snake = 0;
+
 /* ------ Event Listeners ------ */
 //Transition from Main page to first question
 getStartedButton.addEventListener("click", (e) => {
@@ -21,11 +27,33 @@ getStartedButton.addEventListener("click", (e) => {
   questionsPage.style.display = "flex";
 });
 
+function getCurrentQuestionData() {
+  return Data.find((obj, i) => i === questionIndex);
+}
+
 function getNextQuestion() {
-  Data.forEach((obj, i) => {
-    if (i === questionIndex) {
-      questionsText.innerText = obj.text;
-    }
+  questionsText.innerText = getCurrentQuestionData().text;
+  buttons();
+}
+
+function buttons() {
+  answerButtons.forEach((button) => {
+    getCurrentQuestionData().answers.forEach((answer, i) => {
+      if (button.classList[1] == i) {
+        button.innerText = answer.text;
+      }
+    });
+
+    button.addEventListener("click", (e) => {
+      getCurrentQuestionData().answers.forEach((answer, i) => {
+        if (button.classList[1] == i) {
+          alligator += answer.weights.alligator;
+          lizard += answer.weights.lizard;
+          turtle += answer.weights.turtle;
+        }
+      });
+      console.debug("Animal Points:", alligator, lizard, turtle);
+    });
   });
 }
 
