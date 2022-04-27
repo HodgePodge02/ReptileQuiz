@@ -1,18 +1,15 @@
 import Data from "./data.js";
 
-//Animals Scores
-let TURTLE = 0;
-
-//GLOBAL VARS
-let questionIndex = 0;
-
-//DOM SELCTORS
+//DOM SELECTORS
 const getStartedButton = document.getElementById("GetStarted");
 const mainPage = document.getElementById("MainPage");
 const questionsPage = document.getElementById("QuestionsPage");
 const counter = document.getElementById("Counter");
 const questionsText = document.getElementById("QuestionsText");
 const answerButtons = document.querySelectorAll(".answer-btn");
+
+//GLOBAL VARS
+let questionIndex = 0;
 
 // REPTILE VAR
 let alligator = 0;
@@ -33,6 +30,7 @@ function getCurrentQuestionData() {
 
 function getNextQuestion() {
   questionsText.innerText = getCurrentQuestionData().text;
+  counter.innerText = `${questionIndex + 1}/${Data.length}`;
   buttons();
 }
 
@@ -52,11 +50,11 @@ function buttons() {
           turtle += answer.weights.turtle;
         }
       });
+      questionIndex += 1;
+      getNextQuestion();
       console.debug("Animal Points:", alligator, lizard, turtle);
     });
   });
 }
-
-// counter.innerText = questionIndex + 1;
 
 getNextQuestion();

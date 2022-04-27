@@ -27,7 +27,7 @@ nav {
 
 #MainPage {
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -73,6 +73,17 @@ nav {
   background: #86aba9;
   color: white;
   border: none;
+}
+#QuestionsPage #QuestionsContent #Questions button:hover {
+  cursor: pointer;
+}
+
+#ResultPage {
+  display: flex;
+}
+
+#GetStarted:hover {
+  cursor: pointer;
 }
 
 .flex-end {
