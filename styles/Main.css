@@ -27,7 +27,7 @@ nav {
 
 #MainPage {
   height: 100vh;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -78,8 +78,19 @@ nav {
   cursor: pointer;
 }
 
-#ResultPage {
+#ResultContent {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+#ResultContent p {
+  width: 50%;
+}
+#ResultContent img {
+  margin: 2rem;
+  border-radius: 15px;
 }
 
 #GetStarted:hover {

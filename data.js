@@ -39,14 +39,16 @@ export default [
           lizard: 2,
           turtle: 3,
         },
-
+      },
+      {
         text: "Whatever comes along, dead, alive, vegetation, whatever dude, food is food!",
         weights: {
           alligator: 5,
           lizard: 2,
           turtle: 3,
         },
-
+      },
+      {
         text: "Catching my prey in mid-air!",
         weights: {
           alligator: 5,
@@ -58,6 +60,7 @@ export default [
   },
   {
     text: "Something is attacking you! what do you do?",
+    final_question: true,
     answers: [
       {
         text: "RUN and don't stop until you're completely hidden.",
@@ -66,14 +69,18 @@ export default [
           lizard: 2,
           turtle: 3,
         },
+      },
 
+      {
         text: "Who has the audacity to attack me?! I am the Apex predator, I am the one who attacks...",
         weights: {
           alligator: 5,
           lizard: 2,
           turtle: 3,
         },
+      },
 
+      {
         text: "Try and escape but if your attacker is relentless then chomp at em!",
         weights: {
           alligator: 5,
