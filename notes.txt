@@ -1,0 +1,5 @@
+for 05/04/2022
+
+1. Write media styling 
+
+2. Create a usable share button

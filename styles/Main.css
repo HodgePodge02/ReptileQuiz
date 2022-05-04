@@ -92,6 +92,22 @@ nav {
   margin: 2rem;
   border-radius: 15px;
 }
+#ResultContent button {
+  padding: 0.2rem;
+  margin: 1.5rem 1rem;
+  font-size: 1.5rem;
+  color: white;
+  background: #d13d3d;
+  border-radius: 7px;
+  border: none;
+}
+#ResultContent button:hover {
+  cursor: pointer;
+}
+
+#ResultText {
+  font-size: 1.2rem;
+}
 
 #GetStarted:hover {
   cursor: pointer;

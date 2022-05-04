@@ -12,10 +12,10 @@ export default [
         },
       },
       {
-        text: "Stay still and blend in with your environment...",
+        text: "Stay still and blend in with the environment...",
         weights: {
           lizard: 5,
-          turtle: 2,
+          turtle: 3,
           alligator: 2,
         },
       },
@@ -43,7 +43,7 @@ export default [
       {
         text: "Whatever comes along, dead, alive, vegetation, whatever dude, food is food!",
         weights: {
-          alligator: 5,
+          alligator: 1,
           lizard: 2,
           turtle: 3,
         },
@@ -51,22 +51,21 @@ export default [
       {
         text: "Catching my prey in mid-air!",
         weights: {
-          alligator: 5,
-          lizard: 2,
-          turtle: 3,
+          alligator: 2,
+          lizard: 5,
+          turtle: 2,
         },
       },
     ],
   },
   {
     text: "Something is attacking you! what do you do?",
-    final_question: true,
     answers: [
       {
         text: "RUN and don't stop until you're completely hidden.",
         weights: {
-          alligator: 5,
-          lizard: 2,
+          alligator: 1,
+          lizard: 4,
           turtle: 3,
         },
       },
@@ -83,9 +82,68 @@ export default [
       {
         text: "Try and escape but if your attacker is relentless then chomp at em!",
         weights: {
+          alligator: 4,
+          lizard: 2,
+          turtle: 5,
+        },
+      },
+    ],
+  },
+  {
+    text: "You're at a wedding reception and the buffet is ready, what do you do?",
+    answers: [
+      {
+        text: "Pick out your favorites and secure a safe space to eat.",
+        weights: {
+          alligator: 1,
+          lizard: 3,
+          turtle: 5,
+        },
+      },
+      {
+        text: "Don't even bother with a plate, just dig right in until you're full, don't mind the horrified in-laws, just don't be too surprised when you don't get invited to a wedding again.",
+        weights: {
+          alligator: 5,
+          lizard: 2,
+          turtle: 1,
+        },
+      },
+      {
+        text: "Sneak up on the buffet and eat while hanging on a fan or other ceiling apparatus' to stay out of view of the other guests.",
+        weights: {
+          alligator: 2,
+          lizard: 5,
+          turtle: 2,
+        },
+      },
+    ],
+  },
+  //end
+  {
+    text: "",
+    answers: [
+      {
+        text: "",
+        weights: {
           alligator: 5,
           lizard: 2,
           turtle: 3,
+        },
+      },
+      {
+        text: "",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "",
+        weights: {
+          alligator: 2,
+          lizard: 5,
+          turtle: 2,
         },
       },
     ],
