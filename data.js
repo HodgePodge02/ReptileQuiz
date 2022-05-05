@@ -120,6 +120,122 @@ export default [
   },
   //end
   {
+    text: "The night time is upon you, what will you do?",
+    answers: [
+      {
+        text: "Night time is ideal hunting hours.",
+        weights: {
+          alligator: 5,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Sleep for a bit, here and there but be vigilant of predators.",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Try and get as much sleep as possible",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 5,
+        },
+      },
+    ],
+  },
+  {
+    text: "Winter is almost here, what will you do?",
+    answers: [
+      {
+        text: "Dig a mudhole and conserve energy",
+        weights: {
+          alligator: 5,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Frantically hunt for a safe space for hibernation",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Just chill in a body of water and sleep.",
+        weights: {
+          alligator: 2,
+          lizard: 1,
+          turtle: 5,
+        },
+      },
+    ],
+  },
+  {
+    text: "You're hungry but the prey you are after is already being hunted.",
+    answers: [
+      {
+        text: "No reason to stick around, go elsewhere.",
+        weights: {
+          alligator: 1,
+          lizard: 5,
+          turtle: 3,
+        },
+      },
+      {
+        text: "See what the other predator does and scavenge or challenge the other predator.",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Take what you can get and ferociously defend your kill.",
+        weights: {
+          alligator: 2,
+          lizard: 5,
+          turtle: 2,
+        },
+      },
+    ],
+  },
+  {
+    text: "You come across a small yapping dog, what do you do?",
+    answers: [
+      {
+        text: "Devour the pesky creature, it's loud and annoying, I'm sure the neighbors will be grateful.",
+        weights: {
+          alligator: 5,
+          lizard: 1,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Dip, just leave, never question the ferocity of a stupid chihuahua.",
+        weights: {
+          alligator: 1,
+          lizard: 2,
+          turtle: 3,
+        },
+      },
+      {
+        text: "Hiss at it and chomp at it if it gets to close, otherwise lumber along.",
+        weights: {
+          alligator: 2,
+          lizard: 5,
+          turtle: 2,
+        },
+      },
+    ],
+  },
+  {
     text: "",
     answers: [
       {
