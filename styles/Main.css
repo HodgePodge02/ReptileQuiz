@@ -118,4 +118,89 @@ nav {
   justify-content: flex-end;
   align-items: center;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1150px) {
+  #ResultContent p {
+    width: 62%;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 1000px) {
+  #ResultContent p {
+    width: 68%;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 900px) {
+  #ResultContent img {
+    height: 80%;
+    width: 80%;
+  }
+  #ResultContent p {
+    width: 76%;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 810px) {
+  #ResultContent img {
+    height: 40%;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 800px) {
+  #ResultContent img {
+    height: 48%;
+    width: 91%;
+  }
+  #ResultContent p {
+    width: 76%;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 650px) {
+  #ResultContent img {
+    height: 33%;
+    width: 85%;
+  }
+  #ResultContent p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 550px) {
+  #ResultContent img {
+    height: 28%;
+    width: 80%;
+  }
+  #ResultContent p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 500px) {
+  #ResultContent img {
+    height: 27%;
+    width: 90%;
+  }
+  #ResultContent p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1150px) and (max-width: 425px) {
+  #ResultContent img {
+    height: 26%;
+    width: 95%;
+  }
+  #ResultContent p {
+    font-size: 0.7rem;
+    width: 91%;
+  }
+
+  nav {
+    padding: 3rem;
+    padding-left: 5.5rem;
+  }
+
+  #ResultContent img {
+    height: 22%;
+    width: 96%;
+  }
+  #ResultContent p {
+    width: 92%;
+  }
 }/*# sourceMappingURL=Main.css.map */

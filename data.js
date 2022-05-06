@@ -131,7 +131,7 @@ export default [
         },
       },
       {
-        text: "Sleep for a bit, here and there but be vigilant of predators.",
+        text: "Sleep for a bit, but be vigilant of predators.",
         weights: {
           alligator: 1,
           lizard: 2,
@@ -266,6 +266,4 @@ export default [
   },
 ];
 
-/* 
-You're at a wedding reception and the buffet is ready, what do you do?
-*/
+// move REPTILE VAR to data.js (not sure how but we'll figure it out :/)

@@ -12,6 +12,7 @@ const resultHeader = document.getElementById("ResultHeader");
 const resultImage = document.getElementById("ResultImage");
 const resultText = document.getElementById("ResultText");
 const replayButton = document.getElementById("ReplayButton");
+const shareButton = document.getElementById("ShareButton");
 //GLOBAL VARS
 let questionIndex = 0;
 
@@ -36,9 +37,19 @@ const reptiles = {
     header_text: "Turtle",
     img: "turtle.png",
     paragraph:
-      "These shelled dinosaurs have bragging rights about being one of the oldest species of reptiles in the world! a turtles shell is part of it's skeleton. It's made up of over 50 bones. Similiar to other reptiles, the temperature of the turtle egg is the deciding factor of the gender of the turtle. Some turtle species will stay in the same lake, river, or pond for most of their lives while others (sea turtle) will travel as much as 10,000 miles! ",
+      "These shelled dinosaurs have bragging rights about being one of the oldest species of reptiles in the world! a turtles shell is part of it's skeleton. It's made up of over 50 bones. Similiar to other reptiles, the temperature of the turtle egg is the deciding factor of the gender of the turtle. Some turtle species will stay in the same lake, river, or pond for most of their lives while others (sea turtle species) will travel as much as 10,000 miles! ",
   },
 };
+
+function getUrlReptile() {
+  let url = window.location.href;
+  let splitArr = url.split("?") || [url];
+  if (splitArr.length === 2) {
+    return splitArr[splitArr.length - 1];
+  } else {
+    return null;
+  }
+}
 
 /* ------ Event Listeners ------ */
 //Transition from Main page to first question
@@ -46,6 +57,10 @@ getStartedButton.addEventListener("click", (e) => {
   mainPage.style.display = "none";
   questionsPage.style.display = "flex";
   getNextQuestion();
+});
+
+window.addEventListener("load", () => {
+  getUrlReptile() ? GetResultPageData(getUrlReptile()) : null;
 });
 
 answerButtons.forEach((button) => {
@@ -60,7 +75,7 @@ answerButtons.forEach((button) => {
 
     //Get next question or move to result page
     if (Data.length - 1 === questionIndex) {
-      GetResultPageData();
+      GetResultPageData(getWinner());
     } else {
       questionIndex += 1;
       getNextQuestion();
@@ -87,7 +102,7 @@ function buttons() {
       }
     });
   });
-}
+} // TODO: Come back to function buttons () {}
 
 function getWinner() {
   let animals = [
@@ -102,22 +117,73 @@ function getWinner() {
   const winningReptile = Object.keys(reptiles).find(
     (rep) => reptiles[rep].value === winNumber
   );
-  return reptiles[winningReptile];
+  return winningReptile;
 }
 
 //RESULT PAGE
 
-function GetResultPageData() {
+function GetResultPageData(reptile) {
+  if (!reptile) {
+    alert("There was a problem. Please try again.");
+    window.location.reload();
+  }
   questionsPage.style.display = "none";
+  mainPage.style.display = "none";
   resultPage.style.display = "flex";
-  resultHeader.innerText = getWinner().header_text;
-  resultText.innerText = getWinner().paragraph;
-  resultImage.src = `/img/animals/${getWinner().img}`;
+  resultHeader.innerText = reptiles[reptile].header_text;
+  resultText.innerText = reptiles[reptile].paragraph;
+  resultImage.src = `/img/animals/${reptiles[reptile].img}`;
 }
 
 replayButton.addEventListener("click", (e) => {
   window.location.reload();
 });
+
+shareButton.addEventListener("click", (e) => {
+  copyTextToClipboard(`${window.location.href}?${getWinner()}`);
+});
+
+// COPY TO CLIPBOARD -- code found on StackOverflow smh
+function copyTextToClipboard(text) {
+  if (!navigator.clipboard) {
+    fallbackCopyTextToClipboard(text);
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    function () {
+      console.log("Async: Copying to clipboard was successful!");
+      alert("Link copied to clipboard!");
+    },
+    function (err) {
+      console.error("Async: Could not copy text: ", err);
+      alert("Could not copy link to clipboard. :(");
+    }
+  );
+}
+
+function fallbackCopyTextToClipboard(text) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+
+  // Avoid scrolling to bottom
+  textArea.style.top = "0";
+  textArea.style.left = "0";
+  textArea.style.position = "fixed";
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    var successful = document.execCommand("copy");
+    var msg = successful ? "successful" : "unsuccessful";
+    console.log("Fallback: Copying text command was " + msg);
+  } catch (err) {
+    console.error("Fallback: Oops, unable to copy", err);
+  }
+
+  document.body.removeChild(textArea);
+}
 
 //getStartedButton.addEventListener("click", (e) => {
 //   mainPage.style.display = "none";
