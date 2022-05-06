@@ -1,11 +1,13 @@
 for 05/04/2022
 
-1. Write media styling (done)
+1. Write media styling (partially done)
 
 2. Create a usable share button (done)
 
-for 5/05/2022
+for 05/05/2022
 
-3. Adjust "copy to clipboard" page so it doesn't show "share" or "replay". 
+3. Adjust "copy to clipboard" page so it doesn't show "share" or "replay". (done)
+
+05/06/2022
 
 
