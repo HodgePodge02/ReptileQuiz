@@ -218,7 +218,7 @@ export default [
         },
       },
       {
-        text: "Dip, just leave, never question the ferocity of a stupid chihuahua.",
+        text: "Just leave, never question the ferocity of a chihuahua.",
         weights: {
           alligator: 1,
           lizard: 2,
