@@ -71,7 +71,7 @@ export default [
       },
 
       {
-        text: "Who has the audacity to attack me?! I am the Apex predator, I am the one who attacks...",
+        text: "Turn the 'predator' in to prey.",
         weights: {
           alligator: 5,
           lizard: 2,
@@ -236,10 +236,10 @@ export default [
     ],
   },
   {
-    text: "",
+    text: "You're trying to attract a mate, what will you do?",
     answers: [
       {
-        text: "",
+        text: "A tiresome wreslting match with some singing",
         weights: {
           alligator: 5,
           lizard: 2,
@@ -247,15 +247,15 @@ export default [
         },
       },
       {
-        text: "",
+        text: "Chase your mate and bite them. (Not a recommended tactic for humans)",
         weights: {
           alligator: 1,
           lizard: 2,
-          turtle: 3,
+          turtle: 4,
         },
       },
       {
-        text: "",
+        text: "Bob your head up and down repeatedly. Works like 30% of the time",
         weights: {
           alligator: 2,
           lizard: 5,
