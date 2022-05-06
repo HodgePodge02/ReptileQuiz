@@ -55,12 +55,14 @@ function getUrlReptile() {
 //Transition from Main page to first question
 getStartedButton.addEventListener("click", (e) => {
   mainPage.style.display = "none";
+  resultPage.style.display = "none";
   questionsPage.style.display = "flex";
   getNextQuestion();
 });
 
 window.addEventListener("load", () => {
   getUrlReptile() ? GetResultPageData(getUrlReptile()) : null;
+  resultPage.style.display = "none";
 });
 
 answerButtons.forEach((button) => {
