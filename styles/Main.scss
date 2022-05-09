@@ -30,7 +30,7 @@ nav {
 
 #MainPage {
   height: 100vh;
-  display: flex; //change this back!
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -40,7 +40,7 @@ nav {
     align-items: center;
     flex-direction: column;
     img {
-      margin: 2rem;
+      margin: 4rem;
       border-radius: 15px;
     }
     button {
@@ -58,24 +58,13 @@ nav {
 #QuestionsPage {
   display: none;
   #QuestionsContent {
-    width: 50%;
+    width: 100%;
+    padding: 1rem;
     #Questions {
       display: flex;
       flex-direction: column;
       h1 {
         margin-bottom: 1rem;
-      }
-      button {
-        margin: 1rem 0rem;
-        padding: 0.8rem;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        background: #86aba9;
-        color: white;
-        border: none;
-        &:hover {
-          cursor: pointer;
-        }
       }
     }
   }
@@ -116,7 +105,21 @@ nav {
     cursor: pointer;
   }
 }
+
 //classes
+
+.answer-btn {
+  margin: 1rem 0rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  background: #86aba9;
+  color: white;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 .flex-end {
   display: flex;
@@ -126,9 +129,71 @@ nav {
 }
 // media styling for HomePage
 
+@media screen and (max-width: 900px) {
+  #MainContent {
+    img {
+      height: 65%;
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 685px) {
+    #MainContent {
+      h1 {
+        font-size: 1.6rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    #MainContent {
+      margin-bottom: 5rem;
+      h1 {
+        padding-left: 3rem;
+      }
+      img {
+        width: 90%;
+      }
+    }
+  }
+  @media screen and (max-width: 350px) {
+    #MainContent {
+      h1 {
+        margin-top: 7rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
 // media styling for QuestionsPage
 
-// media styling for ResultContent
+@media screen and (max-width: 750px) {
+  #QuestionsContent {
+    margin-bottom: 3rem;
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  @media screen and (max-width: 525px) {
+    #QuestionsContent {
+      h1 {
+        font-size: 1.2rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    .answer-btn {
+      margin: 0.5rem;
+    }
+    .flex-end {
+      padding-top: 2rem;
+    }
+  }
+}
+
+//<--- media styling for ResultContent --->
 
 @media screen and (max-width: 1150px) {
   #ResultContent {
@@ -210,6 +275,9 @@ nav {
   }
   @media screen and (max-width: 425px) {
     #ResultContent {
+      h1 {
+        padding: 1rem;
+      }
       img {
         height: 26%;
         width: 95%;
@@ -237,4 +305,5 @@ nav {
     }
   }
 }
+
 // @media screen and (max-width: px) {}
