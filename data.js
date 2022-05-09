@@ -101,7 +101,7 @@ export default [
         },
       },
       {
-        text: "Don't even bother with a plate, just dig right in until you're full, don't mind the horrified in-laws, just don't be too surprised when you don't get invited to a wedding again.",
+        text: "Don't even bother with a plate, just dig right in until you're full, don't mind the horrified in-laws.",
         weights: {
           alligator: 5,
           lizard: 2,
@@ -109,7 +109,7 @@ export default [
         },
       },
       {
-        text: "Sneak up on the buffet and eat while hanging on a fan or other ceiling apparatus' to stay out of view of the other guests.",
+        text: "Sneak up on the buffet and eat while hanging on a fan or other ceiling apparatus.",
         weights: {
           alligator: 2,
           lizard: 5,
