@@ -1,6 +1,6 @@
 for 05/04/2022
 
-1. Write media styling (partially done)
+1. Write media styling (done)
 
 2. Create a usable share button (done)
 
