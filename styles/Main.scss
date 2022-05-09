@@ -58,7 +58,7 @@ nav {
 #QuestionsPage {
   display: none;
   #QuestionsContent {
-    width: 100%;
+    width: 50%;
     padding: 1rem;
     #Questions {
       display: flex;
@@ -176,10 +176,13 @@ nav {
     }
   }
   @media screen and (max-width: 525px) {
-    #QuestionsContent {
-      h1 {
-        font-size: 1.2rem;
-        margin-top: 5rem;
+    #QuestionsPage {
+      #QuestionsContent {
+        h1 {
+          font-size: 1.2rem;
+          margin-top: 5rem;
+        }
+        width: 92%;
       }
     }
   }
