@@ -1,6 +1,7 @@
 import Data from "./data.js";
 
 //DOM SELECTORS
+const pageTitle = document.getElementById("PageTitle");
 const getStartedButton = document.getElementById("GetStarted");
 const mainPage = document.getElementById("MainPage");
 const questionsPage = document.getElementById("QuestionsPage");
@@ -45,7 +46,19 @@ function getUrlReptile() {
   let url = window.location.href;
   let splitArr = url.split("?") || [url];
   if (splitArr.length === 2) {
+    console.log("Shared page!", splitArr[splitArr.length - 1]);
     return splitArr[splitArr.length - 1];
+  } else {
+    console.log("Not a shared page!");
+    return null;
+  }
+}
+
+function getBaseURI() {
+  let url = window.location.href;
+  let splitArr = url.split("?") || [url];
+  if (splitArr.length === 2) {
+    return splitArr[0];
   } else {
     return null;
   }
@@ -62,7 +75,7 @@ getStartedButton.addEventListener("click", (e) => {
 
 window.addEventListener("load", () => {
   getUrlReptile() ? GetResultPageData(getUrlReptile()) : null;
-  resultPage.style.display = "none";
+  pageTitle.href = `${getBaseURI() ? getBaseURI() : window.location.href}`;
 });
 
 answerButtons.forEach((button) => {
@@ -135,10 +148,16 @@ function GetResultPageData(reptile) {
   resultHeader.innerText = reptiles[reptile].header_text;
   resultText.innerText = reptiles[reptile].paragraph;
   resultImage.src = `/img/animals/${reptiles[reptile].img}`;
+  //replay button text switch
+  getUrlReptile()
+    ? (replayButton.innerText = "Play")
+    : (replayButton.innerText = "Replay");
 }
 
 replayButton.addEventListener("click", (e) => {
-  window.location.reload();
+  getBaseURI()
+    ? (window.location = `${getBaseURI()}`)
+    : window.location.reload();
 });
 
 shareButton.addEventListener("click", (e) => {

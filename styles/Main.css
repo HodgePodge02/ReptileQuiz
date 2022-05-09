@@ -15,6 +15,11 @@ nav {
   padding-left: 4rem;
 }
 
+#PageTitle {
+  text-decoration: none;
+  color: white;
+}
+
 #MainPage,
 #QuestionsPage,
 #ResultPage {
@@ -65,6 +70,10 @@ nav {
 }
 #QuestionsPage #QuestionsContent #Questions h1 {
   margin-bottom: 1rem;
+}
+
+#ResultPage {
+  display: none;
 }
 
 #ResultContent {

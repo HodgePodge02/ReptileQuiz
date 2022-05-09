@@ -14,6 +14,11 @@ nav {
   padding-left: 4rem;
 }
 
+#PageTitle {
+  text-decoration: none;
+  color: white;
+}
+
 #MainPage,
 #QuestionsPage,
 #ResultPage {
@@ -68,6 +73,10 @@ nav {
       }
     }
   }
+}
+
+#ResultPage {
+  display: none;
 }
 
 #ResultContent {
