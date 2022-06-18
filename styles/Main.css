@@ -27,7 +27,11 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(247.02deg, #1e3c38 27.2%, rgba(0, 147, 187, 0.52) 100.44%);
+  background: linear-gradient(
+    247.02deg,
+    #1e3c38 27.2%,
+    rgba(0, 147, 187, 0.52) 100.44%
+  );
 }
 
 #MainPage {
@@ -272,4 +276,4 @@ nav {
   #ResultContent p {
     width: 92%;
   }
-}/*# sourceMappingURL=Main.css.map */
+} /*# sourceMappingURL=Main.css.map */
